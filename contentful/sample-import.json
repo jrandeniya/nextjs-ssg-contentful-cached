@@ -1,0 +1,1414 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "artist",
+        "type": "ContentType",
+        "createdAt": "2021-12-18T05:46:41.192Z",
+        "updatedAt": "2021-12-19T13:39:45.166Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2021-12-19T13:39:45.166Z",
+        "firstPublishedAt": "2021-12-18T05:46:41.904Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Artist",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "songs",
+          "name": "songs",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "song"
+                ],
+                "message": "Only a song can be added to this field"
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "albums",
+          "name": "albums",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "album"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "song",
+        "type": "ContentType",
+        "createdAt": "2021-12-19T06:33:20.743Z",
+        "updatedAt": "2021-12-19T13:39:03.841Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2021-12-19T13:39:03.841Z",
+        "firstPublishedAt": "2021-12-19T06:33:21.308Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Song",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "album",
+          "name": "album",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "album"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        },
+        {
+          "id": "artist",
+          "name": "artist",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "artist"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "album",
+        "type": "ContentType",
+        "createdAt": "2021-12-19T13:33:47.226Z",
+        "updatedAt": "2021-12-19T13:39:58.563Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-19T13:39:58.563Z",
+        "firstPublishedAt": "2021-12-19T13:33:47.952Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Album",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "songs",
+          "name": "songs",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "song"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "artist",
+          "name": "artist",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkContentType": [
+                "artist"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "z497t6g65kf5",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2021-12-18T05:46:41.944Z",
+        "createdBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-19T13:39:45.949Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "artist",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "songs",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "albums",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "z497t6g65kf5",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 14,
+        "createdAt": "2021-12-19T06:33:21.355Z",
+        "createdBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-19T13:39:04.585Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "song",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "album",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artist",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "z497t6g65kf5",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2021-12-19T13:33:48.056Z",
+        "createdBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2021-12-19T13:39:59.384Z",
+        "updatedBy": {
+          "sys": {
+            "id": "5cDx7AdyFRqmmAhLwWiQxa",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "album",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "songs",
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "artist",
+          "widgetId": "entryLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "mZBHeeaQFXEfEKvNMuOM7",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:13:47.147Z",
+        "updatedAt": "2021-12-20T01:30:09.456Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-20T01:30:09.456Z",
+        "firstPublishedAt": "2021-12-20T01:15:08.135Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artist"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Drake"
+        },
+        "slug": {
+          "en-US": "drake"
+        },
+        "songs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1DxWqgUVRbpIyRdpBW5MJP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "yuWjOdR6a4iJFDPMxqLht"
+              }
+            }
+          ]
+        },
+        "albums": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3aXaDRwRWxmQn1n8KNqF2x"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "4IdBN9ZBfhNHF2376p5Y1p",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:15:44.978Z",
+        "updatedAt": "2021-12-20T01:18:23.005Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2021-12-20T01:18:23.005Z",
+        "firstPublishedAt": "2021-12-20T01:16:04.313Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "artist"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Eminem"
+        },
+        "slug": {
+          "en-US": "eminem"
+        },
+        "songs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2gt0W9YqFRUTXe58JV9zG0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4qxhkBF3MYL81N3bQIQfDs"
+              }
+            }
+          ]
+        },
+        "albums": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6zdd7bXiJEa2oWfPDZ3uBy"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "6zdd7bXiJEa2oWfPDZ3uBy",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:16:22.910Z",
+        "updatedAt": "2021-12-20T01:18:05.857Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2021-12-20T01:18:05.857Z",
+        "firstPublishedAt": "2021-12-20T01:18:05.857Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "album"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "The Marshall Mathers LP 2"
+        },
+        "slug": {
+          "en-US": "the-marshall-mathers-lp-2"
+        },
+        "songs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2gt0W9YqFRUTXe58JV9zG0"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4qxhkBF3MYL81N3bQIQfDs"
+              }
+            }
+          ]
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4IdBN9ZBfhNHF2376p5Y1p"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "2gt0W9YqFRUTXe58JV9zG0",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:16:43.999Z",
+        "updatedAt": "2021-12-20T01:17:18.701Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2021-12-20T01:17:18.701Z",
+        "firstPublishedAt": "2021-12-20T01:17:18.701Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "song"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Bad Guy"
+        },
+        "slug": {
+          "en-US": "bad-guy"
+        },
+        "album": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6zdd7bXiJEa2oWfPDZ3uBy"
+            }
+          }
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4IdBN9ZBfhNHF2376p5Y1p"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "4qxhkBF3MYL81N3bQIQfDs",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:17:31.997Z",
+        "updatedAt": "2021-12-20T01:17:55.291Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2021-12-20T01:17:55.291Z",
+        "firstPublishedAt": "2021-12-20T01:17:55.291Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "song"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Rap God"
+        },
+        "slug": {
+          "en-US": "rap-god"
+        },
+        "album": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "6zdd7bXiJEa2oWfPDZ3uBy"
+            }
+          }
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "4IdBN9ZBfhNHF2376p5Y1p"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "3aXaDRwRWxmQn1n8KNqF2x",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:19:18.519Z",
+        "updatedAt": "2021-12-20T01:20:19.422Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2021-12-20T01:20:19.422Z",
+        "firstPublishedAt": "2021-12-20T01:20:19.422Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "album"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Scorpion"
+        },
+        "slug": {
+          "en-US": "scorpion"
+        },
+        "songs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1DxWqgUVRbpIyRdpBW5MJP"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "yuWjOdR6a4iJFDPMxqLht"
+              }
+            }
+          ]
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "mZBHeeaQFXEfEKvNMuOM7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "1DxWqgUVRbpIyRdpBW5MJP",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:19:37.207Z",
+        "updatedAt": "2021-12-20T01:19:53.275Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-20T01:19:53.275Z",
+        "firstPublishedAt": "2021-12-20T01:19:53.275Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "song"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Elevate"
+        },
+        "slug": {
+          "en-US": "elevate"
+        },
+        "album": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3aXaDRwRWxmQn1n8KNqF2x"
+            }
+          }
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "mZBHeeaQFXEfEKvNMuOM7"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "id": "yuWjOdR6a4iJFDPMxqLht",
+        "type": "Entry",
+        "createdAt": "2021-12-20T01:19:58.776Z",
+        "updatedAt": "2021-12-20T01:20:15.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2021-12-20T01:20:15.745Z",
+        "firstPublishedAt": "2021-12-20T01:20:15.745Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "song"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "God's Plan"
+        },
+        "slug": {
+          "en-US": "gods-plan"
+        },
+        "album": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3aXaDRwRWxmQn1n8KNqF2x"
+            }
+          }
+        },
+        "artist": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "mZBHeeaQFXEfEKvNMuOM7"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "5kqsKE90x4o2QIVRV0PEZK",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "c04ec954-2b72-4dad-880d-c9f59cb23802"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "createdAt": "2021-12-18T05:45:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedAt": "2021-12-18T05:45:51Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "5ktpZOgPHDSi8Y2X0EbbY0",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "z497t6g65kf5"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "createdAt": "2021-12-18T05:45:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "5cDx7AdyFRqmmAhLwWiQxa"
+          }
+        },
+        "updatedAt": "2021-12-18T05:45:52Z"
+      }
+    }
+  ]
+}
