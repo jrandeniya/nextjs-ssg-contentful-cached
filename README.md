@@ -1,6 +1,6 @@
 # NextJS SSG + Contentful + File System Caching
 
-> This project is an implementation of one of the ideas in https://github.com/vercel/next.js/discussions/11272.
+> This project is an implementation of one of the ideas in https://github.com/vercel/next.js/discussions/11272 to allow data being shared between `getStaticPaths` and `getStaticProps`.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) that fetches data from [Contentful](https://www.contentful.com/) at build time via Server Side Generation (SSG).
 
