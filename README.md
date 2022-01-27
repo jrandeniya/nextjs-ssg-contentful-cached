@@ -2,7 +2,7 @@
 
 > This project is an implementation of one of the ideas in https://github.com/vercel/next.js/discussions/11272 to allow data being shared between `getStaticPaths` and `getStaticProps`.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) that fetches data from [Contentful](https://www.contentful.com/) at build time via Server Side Generation (SSG).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) that fetches data from [Contentful](https://www.contentful.com/) at build time via Static Site Generation (SSG).
 
 The problem it solves is that NextJS SSG cannot share data between routes, so you have to fetch from Contentful for each route. This solution aims to separate the data fetching from Contentful and Next's SSG. Allowing you to fetch the content upfront, cache it on your file system, then reuse it for subsequent calls from `getStaticPaths` or `getStaticProps`.
 
